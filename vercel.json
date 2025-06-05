@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "functions": {
+      "api/wechat.py": {
+        "runtime": "python3.9",
+        "maxDuration": 10
+      }
+    },
+    "env": {
+      "WECHAT_TOKEN": "@wechat_token"
+    }
+  }
