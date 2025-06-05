@@ -1,0 +1,27 @@
+import WXBizMsgCrypt from 'wechat-crypto';
+
+const TOKEN = 'PjUxjVF';
+const ENCODING_AES_KEY = 'RcykAQ8QalwC1ZmkdyCwse1VcDKNJJkDyEuRZi3tz7r'; // 43位字符
+const CORP_ID = "wwf66bbdf6c11de897"; // 企业微信后台查看
+
+const cryptor = new WXBizMsgCrypt(TOKEN, ENCODING_AES_KEY, CORP_ID);
+
+export default function handler(req, res) {
+    if (req.method === 'GET') {
+        const { msg_signature, timestamp, nonce, echostr } = req.query;
+
+        try {
+            const decrypted = cryptor.decrypt(echostr);
+            res.setHeader('Content-Type', 'text/plain');
+            res.status(200).send(decrypted.message);
+        } catch (e) {
+            console.error('验证失败', e);
+            res.status(400).send('Invalid request');
+        }
+    } else if (req.method === 'POST') {
+        // 消息处理逻辑可在此处扩展
+        res.status(200).send('success');
+    } else {
+        res.status(405).send('Method Not Allowed');
+    }
+}
