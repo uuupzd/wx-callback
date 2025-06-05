@@ -5,8 +5,5 @@
         "runtime": "python3.9",
         "maxDuration": 10
       }
-    },
-    "env": {
-      "WECHAT_TOKEN": "@wechat_token"
     }
   }
