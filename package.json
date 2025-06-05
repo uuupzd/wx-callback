@@ -1,15 +1,11 @@
 {
     "name": "wx-callback",
     "version": "1.0.0",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start"
-    },
     "dependencies": {
-        "wechat-crypto": "1.2.3",
-        "next": "13.4.12",
-        "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "wechat-crypto": "^1.0.11",
+        "express": "^4.18.2"
+    },
+    "scripts": {
+        "start": "node index.js"
     }
 }
