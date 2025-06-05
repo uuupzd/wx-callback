@@ -2,7 +2,7 @@
     "name": "wx-callback",
     "version": "1.0.0",
     "dependencies": {
-        "wechat-crypto": "^1.0.11",
+        "wechat-crypto-ts": "^1.0.5",
         "express": "^4.18.2"
     },
     "scripts": {

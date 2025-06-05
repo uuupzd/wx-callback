@@ -1,4 +1,5 @@
-const WechatCrypto = require('wechat-crypto');
+const WXBizMsgCrypt = require('wechat-crypto-ts');
+
 
 const TOKEN = 'PjUxjVF';
 const ENCODING_AES_KEY = 'RcykAQ8QalwC1ZmkdyCwse1VcDKNJJkDyEuRZi3tz7r'; // 43位字符
