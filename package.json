@@ -10,6 +10,6 @@
         "next": "13.4.12",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "wechat-crypto": "1.0.3"
+        "wechat-enterprise": "^1.1.1"
     }
 }
